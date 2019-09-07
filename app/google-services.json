@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "695360237441",
+    "firebase_url": "https://ueeproject-4259d.firebaseio.com",
+    "project_id": "ueeproject-4259d",
+    "storage_bucket": "ueeproject-4259d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695360237441:android:20515554f62e1ec7628280",
+        "android_client_info": {
+          "package_name": "com.example.schoolline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695360237441-nfdiduukhvnsdbs8tqra47qe78736nul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.schoolline",
+            "certificate_hash": "a20c46a67d06aefe0d5b3aaa3313395c88f5c1dd"
+          }
+        },
+        {
+          "client_id": "695360237441-abtlgm3afcf8j151asilc1bcj5q2010g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi2zqjQV6tIGidUMFNbKLfYQ_mnYkicfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695360237441-abtlgm3afcf8j151asilc1bcj5q2010g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

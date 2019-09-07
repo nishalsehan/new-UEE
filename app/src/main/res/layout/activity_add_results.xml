@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddResultsActivity"
+    android:background="@drawable/background">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:background="@drawable/new_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:paddingBottom="20dp"
+                    android:text="Add Results"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/autour_one"
+                    android:textSize="35dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/grade_update_background">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Grade Level : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="10dp"
+                        android:layout_gravity="center_vertical|left"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/grade_update_background">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Classroom : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/classroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="10dp"
+
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/grade_update_background">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Subject : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="10dp"
+
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/grade_update_background">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Student : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/student"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="10dp"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_horizontal"
+                    >
+
+
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="Col 01 : "
+                                android:textSize="20dp"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"/>
+
+                            <EditText
+                                android:id="@+id/col01"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="20dp"
+                                android:paddingTop="10dp"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:fontFamily="@font/metrophobic"
+                                android:paddingBottom="5dp"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:background="@drawable/grade_update_background"
+                                android:textSize="20dp" />
+
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Col 02 : "
+                                    android:textSize="20dp"
+
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/col02"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/grade_update_background"
+                        android:fontFamily="@font/metrophobic"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_horizontal"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Col 03 : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"/>
+                    <EditText
+                        android:id="@+id/col03"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/grade_update_background"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Col 04 : "
+                        android:textSize="20dp"
+
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+                    <EditText
+                        android:id="@+id/col04"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingBottom="5dp"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:background="@drawable/grade_update_background"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_horizontal"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Col 05 : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"/>
+                    <EditText
+                        android:id="@+id/col05"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/grade_update_background"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Col 06 : "
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp" />
+                    <EditText
+                        android:id="@+id/col06"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/grade_update_background"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_horizontal"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Col 07 : "
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"/>
+                    <EditText
+                        android:id="@+id/col07"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/grade_update_background"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Avg      : "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/avg"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/grade_update_background"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sum    :"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"/>
+                    <EditText
+                        android:id="@+id/sum"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/grade_update_background"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total   :"
+                        android:textSize="20dp"
+
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"/>
+                    <EditText
+                        android:id="@+id/total"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/metrophobic"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/grade_update_background"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="130dp"
+                        android:layout_height="55dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/back_button"
+                        android:drawableLeft="@drawable/ic_settings_backup_restore_black_24dp"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:text=" Back"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/save"
+                        style="@style/AppTheme.RoundedCornerMaterialButton"
+                        android:layout_width="130dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@drawable/ic_save_black_24dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="24dp"
+                        android:text=" Save"
+                        android:textSize="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

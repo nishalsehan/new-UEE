@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@drawable/student"
+            android:title="@string/menu_students" />
+        <item
+            android:id="@+id/nav_teachers"
+            android:icon="@drawable/teacher"
+            android:title="@string/menu_teachers" />
+
+    </group>
+
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/payment"
+            android:title="@string/menu_payments" />
+        <item
+            android:id="@+id/nav_subjects"
+            android:icon="@drawable/subjects"
+            android:title="@string/menu_subjects" />
+        <item
+            android:id="@+id/nav_results"
+            android:icon="@drawable/results"
+            android:title="@string/menu_results" />
+        <item
+            android:id="@+id/nav_grades"
+            android:icon="@drawable/grades"
+            android:title="@string/menu_grades" />
+        <item
+            android:id="@+id/nav_classrooms"
+            android:icon="@drawable/classrooms"
+            android:title="@string/menu_classrooms" />
+
+    </group>
+
+</menu>
