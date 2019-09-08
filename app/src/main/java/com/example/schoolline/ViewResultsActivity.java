@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,8 @@ import java.util.ArrayList;
 
 public class ViewResultsActivity extends Fragment {
 
-    TextView title,next;
+    TextView title;
+    ImageView next;
 
     @Nullable
     @Override
@@ -80,13 +82,14 @@ public class ViewResultsActivity extends Fragment {
 
         data.setValueTextSize(10f);
 
+
         data.setHighlightEnabled(true);
 
         pieChart.setData(data);
 
         pieChart.setDescriptionTextSize(30f);
 
-        pieChart.setDescription("Results");
+        pieChart.setDescription("");
 
         dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
 
@@ -99,6 +102,7 @@ public class ViewResultsActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new StudentResultsActivity());
+                fragmentTransaction.addToBackStack(ViewResultsActivity.class.getName());
                 fragmentTransaction.commit();
 
             }

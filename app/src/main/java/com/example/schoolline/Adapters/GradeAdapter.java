@@ -22,6 +22,7 @@ import com.example.schoolline.GradeDashboard;
 import com.example.schoolline.Model.Grades;
 import com.example.schoolline.R;
 import com.example.schoolline.ViewGradesActivity;
+import com.example.schoolline.ViewResultsActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -118,6 +119,8 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
                             FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.main_fragment_area, new ViewGradesActivity());
+                            fragmentTransaction.addToBackStack(ViewGradesActivity.class.getName());
+
                             fragmentTransaction.commit();
                         }
                     });
@@ -167,6 +170,7 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
                             FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.main_fragment_area, new ViewGradesActivity());
+                            fragmentTransaction.addToBackStack(ViewGradesActivity.class.getName());
                             fragmentTransaction.commit();
                         }
                     });

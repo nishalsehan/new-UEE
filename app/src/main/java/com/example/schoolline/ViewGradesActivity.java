@@ -41,7 +41,8 @@ public class ViewGradesActivity extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mDialog = new ProgressDialog(getActivity());
-        mDialog.setMessage("Loading...");
+        mDialog.setMessage("Please wait...");
+        mDialog.setCancelable(false);
         mDialog.show();
         recyclerView = view.findViewById(R.id.gradeList);
 

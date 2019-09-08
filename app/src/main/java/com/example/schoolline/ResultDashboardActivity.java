@@ -38,6 +38,7 @@ public class ResultDashboardActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new AddResultsActivity());
+                fragmentTransaction.addToBackStack(ResultDashboardActivity.class.getName());
                 fragmentTransaction.commit();
             }
         });
@@ -48,6 +49,8 @@ public class ResultDashboardActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new ResultGradesActivity());
+                fragmentTransaction.addToBackStack(ResultDashboardActivity.class.getName());
+
                 fragmentTransaction.commit();
             }
         });

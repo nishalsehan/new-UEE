@@ -48,6 +48,7 @@ public class StudentResultsActivity extends Fragment {
 
         mDialog = new ProgressDialog(getActivity());
         mDialog.setMessage("Loading...");
+        mDialog.setCancelable(false);
         mDialog.show();
 
         title = view.findViewById(R.id.resultTitle);

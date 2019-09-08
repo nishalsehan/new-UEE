@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.schoolline.Model.Grades;
 import com.example.schoolline.R;
 import com.example.schoolline.ResultClassActivity;
+import com.example.schoolline.ResultGradesActivity;
 import com.example.schoolline.ViewResultsActivity;
 
 import java.util.ArrayList;
@@ -89,6 +90,8 @@ public class ResultGradeAdapter extends RecyclerView.Adapter<ResultGradeAdapter.
                     FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.main_fragment_area, new ResultClassActivity());
+                    fragmentTransaction.addToBackStack(ResultGradesActivity.class.getName());
+
                     fragmentTransaction.commit();
                 }
             });

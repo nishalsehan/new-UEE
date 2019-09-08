@@ -37,6 +37,7 @@ public class GradeDashboard extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new AddGradesActivity());
+                fragmentTransaction.addToBackStack(GradeDashboard.class.getName());
                 fragmentTransaction.commit();
             }
         });
@@ -47,6 +48,7 @@ public class GradeDashboard extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new ViewGradesActivity());
+                fragmentTransaction.addToBackStack(GradeDashboard.class.getName());
                 fragmentTransaction.commit();
             }
         });

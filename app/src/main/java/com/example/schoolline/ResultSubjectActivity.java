@@ -39,6 +39,7 @@ public class ResultSubjectActivity extends Fragment {
 
         mDialog = new ProgressDialog(getActivity());
         mDialog.setMessage("Loading...");
+        mDialog.setCancelable(false);
         mDialog.show();
         recyclerView = view.findViewById(R.id.resultSubjectList);
 

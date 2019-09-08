@@ -56,9 +56,10 @@ public class StudentResultAdapter extends RecyclerView.Adapter<StudentResultAdap
         ViewHolder.sum.setText(""+mData.get(i).getSum());
         ViewHolder.total.setText(""+mData.get(i).getTotal());
 
-        if(i==mData.size()-1){
-            mDialog.dismiss();
-        }
+        System.out.println(mData.size());
+
+        mDialog.dismiss();
+
     }
 
 

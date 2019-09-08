@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,6 +33,7 @@ public class AddGradesActivity extends Fragment {
         return inflater.inflate(R.layout.activity_add_grades,null);
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -47,6 +50,7 @@ public class AddGradesActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new GradeDashboard());
+                fragmentTransaction.addToBackStack(AddGradesActivity.class.getName());
                 fragmentTransaction.commit();
             }
         });
@@ -71,6 +75,7 @@ public class AddGradesActivity extends Fragment {
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.main_fragment_area, new GradeDashboard());
+                    fragmentTransaction.addToBackStack(AddGradesActivity.class.getName());
                     fragmentTransaction.commit();
 
                 }

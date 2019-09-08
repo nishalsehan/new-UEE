@@ -122,6 +122,7 @@ public class AddResultsActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new ResultDashboardActivity());
+                fragmentTransaction.addToBackStack(AddResultsActivity.class.getName());
                 fragmentTransaction.commit();
             }
         });
@@ -157,6 +158,7 @@ public class AddResultsActivity extends Fragment {
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.main_fragment_area, new ResultDashboardActivity());
+                    fragmentTransaction.addToBackStack(AddResultsActivity.class.getName());
                     fragmentTransaction.commit();
                     Toast.makeText(getActivity(),"Successfully added",Toast.LENGTH_SHORT).show();
 
