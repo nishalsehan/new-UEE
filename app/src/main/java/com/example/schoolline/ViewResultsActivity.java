@@ -45,14 +45,11 @@ public class ViewResultsActivity extends Fragment {
 
         next = view.findViewById(R.id.next);
 
-
-
-        PieChart pieChart = (PieChart) view.findViewById(R.id.piechart);
+        PieChart pieChart = view.findViewById(R.id.piechart);
 
         SharedPreferences prefs =getActivity(). getSharedPreferences("My pref", Context.MODE_PRIVATE);
 
         final String subject = prefs.getString("subject",null);
-
 
         title.setText("Results of "+subject);
 
@@ -75,15 +72,15 @@ public class ViewResultsActivity extends Fragment {
         xVals.add("S\n+35%");
         xVals.add("F\n-35%");
 
-
         PieData data = new PieData(xVals, dataSet);
 
         data.setValueFormatter(new PercentFormatter());
 
         data.setValueTextSize(10f);
 
-
         data.setHighlightEnabled(true);
+
+        data.setValueTextColor(R.color.colorPrimary);
 
         pieChart.setData(data);
 
@@ -91,7 +88,7 @@ public class ViewResultsActivity extends Fragment {
 
         pieChart.setDescription("");
 
-        dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
 
         pieChart.setDrawHoleEnabled(false);
 

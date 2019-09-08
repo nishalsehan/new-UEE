@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
 import com.example.schoolline.Adapters.ResultSubjectAdapter;
@@ -43,6 +44,15 @@ public class ResultSubjectActivity extends Fragment {
         mDialog.show();
         recyclerView = view.findViewById(R.id.resultSubjectList);
 
+        final SwipeRefreshLayout pullToRefresh = view.findViewById(R.id.swiperefresh);
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                displayGrades(); // your code
+                System.out.println("refresh");
+                pullToRefresh.setRefreshing(false);
+            }
+        });
         displayGrades();
 
     }
