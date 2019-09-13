@@ -84,7 +84,7 @@ public class ResultGradeAdapter extends RecyclerView.Adapter<ResultGradeAdapter.
 
                     SharedPreferences.Editor editor = ((FragmentActivity)context).getSharedPreferences("My pref", Context.MODE_PRIVATE).edit();
 
-                    editor.putString("grade", item.get(getAdapterPosition()).getName());
+                    editor.putString("grade", item.get(getAdapterPosition()).getId());
 
                     editor.apply();
                     FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();

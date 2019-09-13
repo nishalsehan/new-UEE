@@ -61,13 +61,10 @@ public class ResultSubjectActivity extends Fragment {
     private void displayGrades() {
         ArrayList<Subject> subjectList = new ArrayList<>();
 
-        subjectList.add(new Subject("Mathematics"));
-        subjectList.add(new Subject("English"));
-        subjectList.add(new Subject("Science"));
-        subjectList.add(new Subject("Commerce"));
-        subjectList.add(new Subject("Physics"));
-        subjectList.add(new Subject("Biology"));
-        subjectList.add(new Subject("Drama"));
+        subjectList.add(new Subject("Mathematics","Grade 02","Class A"));
+        subjectList.add(new Subject("English","Grade 02","Class A"));
+        subjectList.add(new Subject("Science","Grade 02","Class A"));
+
 
 
         setupRecyclerview(subjectList);

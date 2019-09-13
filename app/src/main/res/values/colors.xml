@@ -6,4 +6,17 @@
     <color name="colorPrimary">#0000b4</color>
     <color name="colorPrimaryDark">#0000b4</color>
     <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="white2">#D9DEFA</color>
+    <color name="gray">#DADADA</color>
+
+    <color name="gardientBlue">#749BFF</color>
+    <color name="gardientLightBlue">#9FADFC</color>
+    <color name="gardientLightBlue3">#B3BDFF</color>
+
+    <color name="gardientBlue2">#7B84FF</color>
+    <color name="gardientLightBlue2">#A1ACF5</color>
 </resources>

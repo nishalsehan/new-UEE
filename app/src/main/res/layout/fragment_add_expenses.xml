@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sir"
+    android:weightSum="10">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/textGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Expense"
+            android:textColor="#00008B"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/txtExpName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/pressed"
+        android:drawableLeft="@drawable/expensive"
+        android:paddingLeft="8dp"
+        android:drawablePadding="15dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Name"
+        android:layout_marginTop="50dp"
+
+
+        />
+
+    <EditText
+        android:layout_weight="1"
+        android:id="@+id/txtExpDesc"
+        android:layout_width="match_parent"
+        android:paddingLeft="8dp"
+        android:background="@drawable/pressed"
+        android:drawableLeft="@drawable/description"
+        android:layout_height="0dp"
+        android:hint="Description"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="15dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        />
+
+    <EditText
+        android:id="@+id/txtExpAmount"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/pressed"
+        android:paddingLeft="8dp"
+        android:drawableLeft="@drawable/money"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Amount"
+        />
+
+    <EditText
+        android:layout_weight="1"
+        android:id="@+id/txtExpDate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/pressed"
+        android:paddingLeft="8dp"
+        android:drawableLeft="@drawable/calendar"
+        android:ems="10"
+        android:clickable="true"
+        android:inputType="date"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:hint="Date"
+        android:drawablePadding="15dp"
+        android:focusable="false"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnExpSave"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/submit"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnExpCancel"
+        android:background="@drawable/button"
+        android:layout_width="300dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</LinearLayout>

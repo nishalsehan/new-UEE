@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/view_students_background_gardient">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        -->
+<!--        -->
+<!--        -->
+<!--        -->
+<!--    </ScrollView>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/studentSearchCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/studentSearchView"
+            app:queryHint="Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_students"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/studentSearchCardView"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

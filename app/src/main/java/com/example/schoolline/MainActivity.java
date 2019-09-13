@@ -1,5 +1,9 @@
 package com.example.schoolline;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -7,26 +11,33 @@ import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Dialog myDialog;
 
+    CardView student,teacher,classroom,payment,subject,result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,14 +45,13 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+
+        student = findViewById(R.id.student);
+        classroom = findViewById(R.id.classroom);
+        payment = findViewById(R.id.payment);
+        teacher = findViewById(R.id.teacher);
+        subject = findViewById(R.id.subject);
+        result = findViewById(R.id.result);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -50,6 +60,70 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        student.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new StudentsFragment());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
+        teacher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new TeacherDashboardActivity());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
+        subject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new SubjectsFragment());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
+
+        classroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new ClassroomDashboardActivity());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
+
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new ResultDashboardActivity());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_fragment_area, new PaymentsExpensesFragment());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
+                fragmentTransaction.commit();
+            }
+        });
     }
 
     @Override
@@ -63,6 +137,27 @@ public class MainActivity extends AppCompatActivity
             if (getFragmentManager().getBackStackEntryCount() != 0) {
                 getFragmentManager().popBackStack();
             } else {
+//                TextView quit,cancel;
+//                myDialog = new Dialog(this);
+//                myDialog.setContentView(R.layout.quit_dialog);
+//                myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                myDialog.setCancelable(false);
+//                cancel = myDialog.findViewById(R.id.no);
+//                cancel.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        myDialog.dismiss();
+//                    }
+//                });
+//                quit = myDialog.findViewById(R.id.yes);
+//                quit.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        MainActivity.super.onBackPressed();
+//                    }
+//                });
+//                myDialog.show();
+                System.out.println("back");
                 super.onBackPressed();
             }
         }
@@ -100,27 +195,42 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            startActivity(new Intent(this,MainActivity.class));
         } else if (id == R.id.nav_students) {
             fragment = new StudentsFragment();
         } else if (id == R.id.nav_teachers) {
-            fragment = new TeachersFragment();
+            fragment = new TeacherDashboardActivity();
         } else if (id == R.id.nav_payments) {
-
+            fragment = new PaymentsExpensesFragment();
         } else if (id == R.id.nav_subjects) {
-
+            fragment = new SubjectsFragment();
         } else if (id == R.id.nav_results) {
             fragment = new ResultDashboardActivity();
         } else if (id == R.id.nav_grades) {
             fragment = new GradeDashboard();
         } else if (id == R.id.nav_classrooms) {
-
+            fragment = new ClassroomDashboardActivity();
         }
 
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_fragment_area, fragment);
+            if (id == R.id.nav_students) {
+                fragmentTransaction.addToBackStack(StudentsFragment.class.getName());
+            } else if (id == R.id.nav_teachers) {
+                fragmentTransaction.addToBackStack(TeacherDashboardActivity.class.getName());
+            } else if (id == R.id.nav_payments) {
+
+            } else if (id == R.id.nav_subjects) {
+                fragmentTransaction.addToBackStack(SubjectsFragment.class.getName());
+            } else if (id == R.id.nav_results) {
+                fragmentTransaction.addToBackStack(ResultDashboardActivity.class.getName());
+            } else if (id == R.id.nav_grades) {
+                fragmentTransaction.addToBackStack(GradeDashboard.class.getName());
+            } else if (id == R.id.nav_classrooms) {
+                fragmentTransaction.addToBackStack(ClassroomDashboardActivity.class.getName());
+            }
             fragmentTransaction.commit();
         }
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -16,10 +17,16 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolline.GradeDashboard;
+import com.example.schoolline.Model.Results;
 import com.example.schoolline.Model.Subject;
 import com.example.schoolline.R;
 import com.example.schoolline.ResultSubjectActivity;
 import com.example.schoolline.ViewResultsActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +76,11 @@ public class ResultSubjectAdapter extends RecyclerView.Adapter<ResultSubjectAdap
 
         TextView name;
 
-
+        int gradeA = 0;
+        int gradeB = 0;
+        int gradeC = 0;
+        int gradeS = 0;
+        int gradeF = 0;
 
 
 
@@ -85,18 +96,73 @@ public class ResultSubjectAdapter extends RecyclerView.Adapter<ResultSubjectAdap
 
                     System.out.println(item.get(getAdapterPosition()).getName());
 
-                    SharedPreferences.Editor editor = ((FragmentActivity)context).getSharedPreferences("My pref", Context.MODE_PRIVATE).edit();
+                    final SharedPreferences.Editor editor = ((FragmentActivity)context).getSharedPreferences("My pref", Context.MODE_PRIVATE).edit();
 
-                    editor.putString("subject", item.get(getAdapterPosition()).getName());
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Results");
 
-                    editor.apply();
 
-                    FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.main_fragment_area, new ViewResultsActivity());
-                    fragmentTransaction.addToBackStack(ResultSubjectActivity.class.getName());
 
-                    fragmentTransaction.commit();
+                    reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if(dataSnapshot.exists()){
+                                for(DataSnapshot ds:dataSnapshot.getChildren()){
+                                    Results results = ds.getValue(Results.class);
+                                    System.out.println(results.getAvg());
+                                    if(results.getAvg()>=75){
+                                        gradeA++;
+                                    }else if(results.getAvg()>=65){
+                                        gradeB++;
+                                    }else if(results.getAvg()>=50){
+                                        gradeC++;
+                                    }else if(results.getAvg()>=35){
+                                        gradeS++;
+                                    }else{
+                                        gradeF++;
+                                    }
+
+
+                                }
+                                editor.putInt("gradeA", gradeA);
+                                editor.putInt("gradeB", gradeB);
+                                editor.putInt("gradeC", gradeC);
+                                editor.putInt("gradeS", gradeS);
+                                editor.putInt("gradeF", gradeF);
+                                editor.putString("subject", item.get(getAdapterPosition()).getName());
+
+                                editor.apply();
+
+                                FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.main_fragment_area, new ViewResultsActivity());
+                                fragmentTransaction.addToBackStack(ResultSubjectActivity.class.getName());
+
+                                fragmentTransaction.commit();
+                            }else {
+                                editor.putInt("gradeA", gradeA);
+                                editor.putInt("gradeB", gradeB);
+                                editor.putInt("gradeC", gradeC);
+                                editor.putInt("gradeS", gradeS);
+                                editor.putInt("gradeF", gradeF);
+                                editor.putString("subject", item.get(getAdapterPosition()).getName());
+
+                                editor.apply();
+
+                                FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.main_fragment_area, new ViewResultsActivity());
+                                fragmentTransaction.addToBackStack(ResultSubjectActivity.class.getName());
+
+                                fragmentTransaction.commit();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
                 }
             });
         }

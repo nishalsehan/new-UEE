@@ -40,24 +40,25 @@
                     android:orientation="vertical"
                     android:layout_margin="16dp"
                     android:padding="10dp"
-                    android:background="@drawable/new_background"
                     android:layout_gravity="center_horizontal|center_vertical">
 
                     <ImageView
-                        android:layout_width="150dp"
+                        android:layout_width="170dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/add_image" />
+                        android:src="@drawable/add_grades" />
 
                     <TextView
-                        android:textAlignment="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add Grades"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/metrophobic"
+                        android:text="Add Grades"
+                        android:textAlignment="center"
+                        android:textColor="#bdc560"
                         android:textSize="28sp"
-                        android:layout_gravity="center"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -83,15 +84,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="10dp"
-                    android:background="@drawable/new_background"
                     android:layout_margin="16dp"
                     android:layout_gravity="center_horizontal|center_vertical">
 
                     <ImageView
-                        android:layout_width="150dp"
+                        android:layout_width="170dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/view_image" />
+                        android:src="@drawable/view_grades" />
 
                     <TextView
                         android:textAlignment="center"
@@ -101,6 +101,8 @@
                         android:layout_marginTop="5dp"
                         android:textStyle="bold"
                         android:textSize="28sp"
+                        android:fontFamily="@font/metrophobic"
+                        android:textColor="#03c2fc"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>

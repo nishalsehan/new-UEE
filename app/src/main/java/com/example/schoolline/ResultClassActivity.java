@@ -1,10 +1,13 @@
 package com.example.schoolline;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +19,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.schoolline.Adapters.ResultClassAdapter;
 import com.example.schoolline.Model.Classrooms;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.ArrayList;
@@ -38,6 +46,7 @@ public class ResultClassActivity extends Fragment {
 
         mDialog = new ProgressDialog(getActivity());
         mDialog.setMessage("Loading...");
+        mDialog.setCancelable(true);
         mDialog.show();
 
         recyclerView = view.findViewById(R.id.resultClassList);
@@ -57,18 +66,35 @@ public class ResultClassActivity extends Fragment {
     }
 
     private void displayGrades() {
-        ArrayList<Classrooms> classList = new ArrayList<>();
+        final ArrayList<Classrooms> classList = new ArrayList<>();
+        SharedPreferences prefs = getActivity().getSharedPreferences("My pref", Context.MODE_PRIVATE);
 
-        classList.add(new Classrooms("Class A"));
-        classList.add(new Classrooms("Class B"));
-        classList.add(new Classrooms("Class C"));
-        classList.add(new Classrooms("Class D"));
-        classList.add(new Classrooms("Class E"));
-        classList.add(new Classrooms("Class F"));
-        classList.add(new Classrooms("Class G"));
-        classList.add(new Classrooms("Class H"));
+        String grade = prefs.getString("grade", null);
 
-        setupRecyclerview(classList);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Grades").child(grade).child("Classrooms");
+
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for (DataSnapshot ds:dataSnapshot.getChildren()){
+                        Classrooms classrooms = ds.getValue(Classrooms.class);
+                        classList.add(classrooms);
+                    }
+                    setupRecyclerview(classList);
+                }else{
+                    mDialog.dismiss();
+                    Toast.makeText(getContext(),"No classes added yet",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
     }
     private void setupRecyclerview(ArrayList<Classrooms> grades) {
         ResultClassAdapter myAdapter = new ResultClassAdapter(getActivity(),grades,mDialog);

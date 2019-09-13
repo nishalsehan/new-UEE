@@ -18,12 +18,21 @@
 
         >
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Grade Update"
+            android:fontFamily="@font/metrophobic"
+            android:textColor="#8703CD"
+            android:textSize="25dp"/>
+
         <EditText
             android:id="@+id/gradeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:hint="Grade name"
             android:background="@drawable/grade_update_background"
@@ -42,7 +51,7 @@
             android:padding="10dp"
             android:ems="10"
             android:background="@drawable/grade_update_background"
-            android:lines="4"
+            android:lines="3"
             android:hint="Description"
             android:gravity="start|top"
             android:inputType="textMultiLine" />
@@ -67,7 +76,7 @@
                 android:paddingLeft="10dp"
                 android:background="@drawable/grade_update_background"
                 android:textColor="#8703CD"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 />
 
             <TextView
@@ -76,14 +85,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Delete"
+                android:text="Update"
                 android:textColor="#8703CD"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:background="@drawable/grade_update_background"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 />
 
 

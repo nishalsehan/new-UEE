@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRegisterStudentTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/student_registration_white"
+                    android:padding="10dp"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/student_add_register_a_student"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutRegisterStudentTop"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentFirstName"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/name_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentFirstName"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentFirstName"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="@string/student_register_first_name"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentFirstName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentLastName"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/name_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentLastName"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentLastName"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="@string/student_register_last_name"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentLastName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentAge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/age_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentAge"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentAge"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentAge"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentDOB"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/age_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentDOB"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentDOB"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentDOB"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentGender"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/gender_white_2"
+                    android:tint="@color/white" />
+
+                <Spinner
+                    android:id="@+id/spinnerRegisterStudentGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentGender"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentGender"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="Gender"
+                    android:spinnerMode="dropdown"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentGender"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentAddress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/address_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentAddress"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentAddress"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_below="@+id/relativeLayoutRegisterStudentAddress"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentPhone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/contact_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentPhone"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentPhone"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="Contact"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRegisterStudentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentPhone"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgViewRegisterStudentEmail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/email_white"
+                    android:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterStudentEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgViewRegisterStudentEmail"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imgViewRegisterStudentEmail"
+                    android:background="@drawable/relative_layout_background_3"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+
+            <Button
+                android:id="@+id/btnRegisterStudentAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutRegisterStudentEmail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/relative_layout_background_2"
+                android:fontFamily="sans-serif-medium"
+                android:text="REGISTER"
+                android:layout_marginBottom="220dp"
+                android:textColor="@color/white" />
+
+
+
+        </RelativeLayout>
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

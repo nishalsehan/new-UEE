@@ -50,7 +50,7 @@ public class AddGradesActivity extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_area, new GradeDashboard());
-                fragmentTransaction.addToBackStack(AddGradesActivity.class.getName());
+                fragmentTransaction.addToBackStack(MainActivity.class.getName());
                 fragmentTransaction.commit();
             }
         });
@@ -75,7 +75,7 @@ public class AddGradesActivity extends Fragment {
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.main_fragment_area, new GradeDashboard());
-                    fragmentTransaction.addToBackStack(AddGradesActivity.class.getName());
+                    fragmentTransaction.addToBackStack(MainActivity.class.getName());
                     fragmentTransaction.commit();
 
                 }

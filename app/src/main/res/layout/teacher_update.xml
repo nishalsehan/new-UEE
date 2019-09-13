@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:background="@drawable/new_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+
+            >
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Name :"
+                android:fontFamily="@font/metrophobic"
+                android:textColor="#000"
+                android:layout_marginLeft="15dp"
+                android:textSize="16dp"
+                />
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="Akitha"
+                android:layout_marginLeft="10dp"
+                android:textSize="16dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center_vertical"
+                android:background="@drawable/grade_update_background"
+                />
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="Udara"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical|right"
+                android:background="@drawable/grade_update_background"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Email :"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/metrophobic"
+                android:textColor="#000"
+                android:textSize="16dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/grade_update_background"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical|right"
+                android:inputType="textEmailAddress"
+                android:paddingRight="10dp"
+                android:text="akithaudara98@gmail.com"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="2dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:fontFamily="@font/metrophobic"
+                android:textColor="#000"
+                android:layout_marginLeft="15dp"
+                android:textSize="16dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/grade_update_background"
+                >
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="45pt"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="50pt"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+            </RadioGroup>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Mobile:"
+                android:fontFamily="@font/metrophobic"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/teleNo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="0775151656"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="16dp"
+                android:layout_marginRight="20dp"
+                android:inputType="number"
+                android:background="@drawable/grade_update_background"
+                android:maxLength="10"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:text="Cancel"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/grade_update_background"
+                android:textColor="#8703CD"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Update"
+                android:textColor="#8703CD"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/grade_update_background"
+                android:textSize="18dp"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

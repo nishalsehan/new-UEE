@@ -27,4 +27,14 @@
     <string name="nav_header_school_line_gmail_com">schoolline@gmail.com</string>
     <string name="topic_register_a_teacher">Register A Teacher</string>
     <string name="menu_results">Results</string>
+    <string name="students_manage">Students Manage</string>
+    <string name="students_add_a_student">Add A Student</string>
+    <string name="students_view_students">View Students</string>
+    <string name="student_add_register_a_student">REGISTER A STUDENT</string>
+    <string name="student_register_first_name">First Name</string>
+    <string name="student_register_last_name">Last Name</string>
+    <string name="student_register_btn_add_student">Add STUDENT</string>
+    <string name="subjects_add_a_subject">Add A Subject</string>
+    <string name="subjects_view_subjects">View Subjects</string>
+    <string name="topic_subjects_manage">Subjects Manage</string>
 </resources>
