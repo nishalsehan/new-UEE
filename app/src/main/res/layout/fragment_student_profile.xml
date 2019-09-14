@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/background1"
     android:layout_height="match_parent">
 
 
+
+
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Name :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Name"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="250dp"
         android:id="@+id/student_profile_label_name"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="250dp"
         android:id="@+id/student_profile_value_name"
         android:layout_toEndOf="@id/student_profile_label_name"/>
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Age :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Age"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_age"
         android:layout_below="@+id/student_profile_label_name"/>
 
@@ -34,19 +47,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_age"
         android:layout_toEndOf="@id/student_profile_label_age"
         android:layout_below="@+id/student_profile_label_name"/>
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="DOB :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="DOB"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_dob"
         android:layout_below="@+id/student_profile_label_age"/>
 
@@ -54,8 +72,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_dob"
         android:layout_toEndOf="@id/student_profile_label_dob"
         android:layout_below="@+id/student_profile_label_age"/>
@@ -63,11 +83,14 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Gender :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Gender"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_gender"
         android:layout_below="@+id/student_profile_label_dob"/>
 
@@ -75,8 +98,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_gender"
         android:layout_toEndOf="@id/student_profile_label_gender"
         android:layout_below="@+id/student_profile_label_dob"/>
@@ -84,11 +109,14 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Address :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Address"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_address"
         android:layout_below="@+id/student_profile_label_gender"/>
 
@@ -96,49 +124,67 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_address"
         android:layout_toEndOf="@id/student_profile_label_address"
         android:layout_below="@+id/student_profile_label_gender"/>
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Contact :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Contact"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_contact"
         android:layout_below="@+id/student_profile_label_address"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_contact"
         android:layout_toEndOf="@id/student_profile_label_contact"
         android:layout_below="@+id/student_profile_label_address"/>
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Email :"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Email"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_label_email"
         android:layout_below="@+id/student_profile_label_contact"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:id="@+id/student_profile_value_email"
         android:layout_toEndOf="@id/student_profile_label_email"
         android:layout_below="@+id/student_profile_label_contact"/>
+
+
+
+
+
+
 
 
 

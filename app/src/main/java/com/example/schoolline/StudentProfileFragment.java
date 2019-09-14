@@ -61,13 +61,13 @@ public class StudentProfileFragment extends Fragment {
                 String email=dataSnapshot.child("email").getValue().toString();
 
 
-                textViewName.setText(name);
-                textViewAge.setText(age);
-                textViewDOB.setText(dob);
-                textViewGender.setText(gender);
-                textViewAddress.setText(address);
-                textViewContact.setText(contact);
-                textViewEmail.setText(email);
+                textViewName.setText(": "+name);
+                textViewAge.setText(": "+age);
+                textViewDOB.setText(": "+dob);
+                textViewGender.setText(": "+gender);
+                textViewAddress.setText(": "+address);
+                textViewContact.setText(": "+contact);
+                textViewEmail.setText(": "+email);
 
 
 
@@ -79,7 +79,7 @@ public class StudentProfileFragment extends Fragment {
             }
         });
 
-        Toast.makeText(getActivity(),"Profile"+ list_student_id,Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),"Loading Profile...",Toast.LENGTH_LONG).show();
         return view;
     }
 

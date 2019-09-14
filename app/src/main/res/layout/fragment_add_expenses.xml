@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/sir"
-    android:weightSum="10">
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp">
 
         <TextView
@@ -28,12 +32,11 @@
     <EditText
         android:id="@+id/txtExpName"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@drawable/pressed"
         android:drawableLeft="@drawable/expensive"
         android:paddingLeft="8dp"
         android:drawablePadding="15dp"
-        android:layout_weight="1"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
@@ -44,13 +47,12 @@
         />
 
     <EditText
-        android:layout_weight="1"
         android:id="@+id/txtExpDesc"
         android:layout_width="match_parent"
         android:paddingLeft="8dp"
         android:background="@drawable/pressed"
         android:drawableLeft="@drawable/description"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:hint="Description"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -62,11 +64,10 @@
     <EditText
         android:id="@+id/txtExpAmount"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@drawable/pressed"
         android:paddingLeft="8dp"
         android:drawableLeft="@drawable/money"
-        android:layout_weight="1"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="30dp"
@@ -77,10 +78,9 @@
         />
 
     <EditText
-        android:layout_weight="1"
         android:id="@+id/txtExpDate"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@drawable/pressed"
         android:paddingLeft="8dp"
         android:drawableLeft="@drawable/calendar"
@@ -125,4 +125,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
-</LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -354,6 +354,20 @@
                 android:background="@drawable/relative_layout_background_2"
                 android:fontFamily="sans-serif-medium"
                 android:text="REGISTER"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btnRegisterStudentReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRegisterStudentAdd"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/relative_layout_background_4"
+                android:fontFamily="sans-serif-medium"
+                android:text="RESET"
                 android:layout_marginBottom="220dp"
                 android:textColor="@color/white" />
 

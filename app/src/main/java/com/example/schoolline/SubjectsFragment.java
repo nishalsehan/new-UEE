@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class SubjectsFragment extends Fragment {
 
-    private CardView addSubjectBtn;
+    private CardView addSubjectBtn,viewSubjectBtn;
     private View view;
 
     @Nullable
@@ -23,6 +23,7 @@ public class SubjectsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_subjects, container, false);
         addSubjectBtn = view.findViewById(R.id.subjects_add_subject_card_view);
+        viewSubjectBtn = view.findViewById(R.id.subjects_view_subjects_card_view);
 
 
         addSubjectBtn.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +35,7 @@ public class SubjectsFragment extends Fragment {
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.main_fragment_area, fragment);
-//                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                 } catch(Exception e) {
                     Toast.makeText(getActivity(),"Please Check Your Network Connection",Toast.LENGTH_LONG).show();
@@ -46,6 +47,27 @@ public class SubjectsFragment extends Fragment {
 
             }
         });
+
+
+
+        viewSubjectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Fragment fragment = new ViewSubjectsFragment();
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.main_fragment_area, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                } catch(Exception e) {
+                    Toast.makeText(getActivity(),"Please Check Your Network Connection",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
 
         return view;
     }

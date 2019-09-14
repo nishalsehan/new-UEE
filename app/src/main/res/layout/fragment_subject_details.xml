@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/background1"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Name"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="250dp"
+        android:id="@+id/subject_details_label_name"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="250dp"
+        android:id="@+id/subject_details_value_name"
+        android:layout_toEndOf="@id/subject_details_label_name"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Grade"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/subject_details_label_grade"
+        android:layout_below="@+id/subject_details_label_name"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/subject_details_value_grade"
+        android:layout_toEndOf="@id/subject_details_label_grade"
+        android:layout_below="@+id/subject_details_label_name"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Classroom"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/subject_details_label_classroom"
+        android:layout_below="@+id/subject_details_label_grade"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/subject_details_value_classroom"
+        android:layout_toEndOf="@id/subject_details_label_classroom"
+        android:layout_below="@+id/subject_details_label_grade"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
