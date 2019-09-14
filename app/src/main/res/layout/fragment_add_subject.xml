@@ -60,6 +60,7 @@
 
                 <RelativeLayout
                     android:id="@+id/relativeLayoutAddSubjectName"
+                    android:background="@drawable/relative_layout_background_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/linearLayoutAddSubjectTop"
@@ -71,7 +72,6 @@
                         android:id="@+id/imgViewAddSubjectName"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/colorPrimary"
                         android:padding="8dp"
                         android:src="@drawable/book_name"
                         android:tint="@color/white" />
@@ -83,7 +83,7 @@
                         android:layout_alignBottom="@+id/imgViewAddSubjectName"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/imgViewAddSubjectName"
-                        android:background="@color/gray"
+                        android:background="@drawable/relative_layout_background_3"
                         android:hint="Name"
                         android:inputType="text"
                         android:paddingStart="20dp"
@@ -96,6 +96,7 @@
                 <RelativeLayout
                     android:id="@+id/relativeLayoutAddSubjectGrade"
                     android:layout_width="match_parent"
+                    android:background="@drawable/relative_layout_background_2"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/relativeLayoutAddSubjectName"
                     android:layout_marginLeft="30dp"
@@ -106,7 +107,6 @@
                         android:id="@+id/imgViewAddSubjectGrade"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/colorPrimary"
                         android:padding="8dp"
                         android:src="@drawable/grades"
                         android:tint="@color/white" />
@@ -118,7 +118,7 @@
                         android:layout_alignBottom="@+id/imgViewAddSubjectGrade"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/imgViewAddSubjectGrade"
-                        android:background="@color/gray"
+                        android:background="@drawable/relative_layout_background_3"
                         android:hint="Grade"
                         android:inputType="number"
                         android:paddingStart="20dp"
@@ -131,6 +131,7 @@
                     android:id="@+id/relativeLayoutAddSubjectClassroom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/relative_layout_background_2"
                     android:layout_below="@+id/relativeLayoutAddSubjectGrade"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
@@ -140,7 +141,6 @@
                         android:id="@+id/imgViewAddSubjectClassroom"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/colorPrimary"
                         android:padding="8dp"
                         android:src="@drawable/classrooms"
                         android:tint="@color/white" />
@@ -152,7 +152,7 @@
                         android:layout_alignBottom="@+id/imgViewAddSubjectClassroom"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/imgViewAddSubjectClassroom"
-                        android:background="@color/gray"
+                        android:background="@drawable/relative_layout_background_3"
                         android:hint="Classroom"
                         android:inputType="number"
                         android:paddingStart="20dp"
@@ -171,9 +171,23 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/colorPrimary"
+                    android:background="@drawable/relative_layout_background_2"
                     android:fontFamily="sans-serif-medium"
                     android:text="ADD SUBJECT"
+                    android:textColor="@color/white" />
+
+
+                <Button
+                    android:id="@+id/btnAddSubjectReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnAddSubjectAdd"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/relative_layout_background_4"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="RESET"
                     android:layout_marginBottom="220dp"
                     android:textColor="@color/white" />
 
