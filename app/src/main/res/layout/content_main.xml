@@ -56,15 +56,16 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Students"
                         android:textColor="#c0344A"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/metrophobic"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:textSize="18sp"/>
+                        android:textSize="18dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -97,14 +98,15 @@
 
                     <TextView
                         android:gravity="center"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metrophobic"
                         android:text="Teachers"
                         android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#009bca"
                         android:layout_marginTop="5dp"
-                        android:textSize="18sp"/>
+                        android:textSize="18dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -136,14 +138,15 @@
                         android:layout_gravity="center_horizontal"/>
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Subjects"
                         android:fontFamily="@font/metrophobic"
                         android:textAlignment="center"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#32cc77"
                         android:layout_marginTop="5dp"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -181,8 +184,9 @@
                         android:fontFamily="@font/metrophobic"
                         android:text="Classroom"
                         android:textAlignment="center"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#ff3c3c"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:layout_marginTop="5dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -215,14 +219,15 @@
                         android:src="@drawable/test_card" />
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Results"
                         android:textAlignment="center"
                         android:fontFamily="@font/metrophobic"
                         android:textColor="#0e7886"
                         android:layout_marginTop="5dp"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
+                        android:layout_gravity="center_horizontal"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -256,14 +261,15 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Payment"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="#27a2db"
                         android:gravity="center"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:fontFamily="@font/metrophobic"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
